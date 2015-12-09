@@ -1,0 +1,76 @@
+---
+version: 1
+disable_existing_loggers: True
+
+# Logging Levels
+# CRITICAL
+# ERROR
+# WARNING
+# INFO
+# DEBUG
+# NOTSET
+
+formatters:
+    pdb_formatter:
+        class: !!python/name:logging.Formatter
+        format: '%(asctime)s [%(levelname)s] [%(module)s.%(funcName)s] %(message)s'
+        datefmt: '[%Y-%m-%d, %H:%M:%S]'
+
+handlers:
+    console_handler:
+        class: logging.StreamHandler
+        level: NOTSET
+        formatter: pdb_formatter
+        stream: ext://sys.stdout
+
+    pdb_app_handler:
+        filename: pdb.log
+        class: logging.handlers.RotatingFileHandler
+        level: NOTSET
+        formatter: pdb_formatter
+        maxBytes: 10485760
+        backupCount: 3
+        encoding: utf8
+
+    uni_err_handler:
+        class: logging.handlers.RotatingFileHandler
+        level: NOTSET
+        formatter: pdb_formatter
+        filename: uni_download_errors.log
+        maxBytes: 10485760
+        backupCount: 3
+        encoding: utf8
+
+    missing_uni_handler:
+        class: logging.handlers.RotatingFileHandler
+        level: NOTSET
+        formatter: pdb_formatter
+        filename: missing_uniprots.log
+        maxBytes: 10485760
+        backupCount: 3
+        encoding: utf8
+
+loggers:
+    pdb_app_logger:
+        level: DEBUG
+        handlers: [pdb_app_handler]
+        propagate: 0
+
+    uni_error_logger:
+        level: DEBUG
+        handlers: [uni_err_handler]
+        propagate: 0
+
+    missing_uni_logger:
+        level: DEBUG
+        handlers: [uni_err_handler]
+        propagate: 0
+
+    pdb_console_logger:
+        level: DEBUG
+        handlers: [console_handler]
+        propagate: 0
+
+root:
+    level: DEBUG
+    handlers: [console_handler, pdb_app_handler]
