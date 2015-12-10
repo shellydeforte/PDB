@@ -31,7 +31,7 @@ Dependencies
 
 Installation with Anaconda
 ==============
--  Begin by cloning the git repository.
+-  `Begin by cloning the git repository. <https://help.github.com/articles/cloning-a-repository/>`__
 -  If desired, create a virtual environment. (This is the easiest and cleanest way to satisfy dependencies.)
 -  Update the PATH variable on your system.
 -  Finally, run *driver_parse.py* to begin data download and analysis.
