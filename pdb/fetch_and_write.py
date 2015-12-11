@@ -14,7 +14,8 @@ def fetch_and_write_files(dirs):
     """Fetch initial data files.
 
     Fetch data from remote servers and write to files if local files
-    do not already exist.
+    do not already exist. Fetches pdb_chain_uniprot.tsv, obsolete PDB
+    files, and X-ray PDB files.
 
     Args:
         dirs (ProjectFolders): A named tuple of directory paths.
