@@ -186,7 +186,7 @@ def _find_matching_datetime_pairs(sorted_dis_names):
     That dictionary, with modified data, is stored as a json file
     for future use.
 
-    The dd_dis text file is kept to enable regeneration of the json
+    The ss_dis text file is kept to enable regeneration of the json
     file without downloading the data again. (This is also helpful
     for unit testing so that servers aren't overloaded.)
 

@@ -20,6 +20,8 @@ def final_filtering(dirs):
     Args:
         dirs (ProjectFolders): A named tuple of directory paths.
 
+    Returns:
+        None
     """
     pdb_initial_composite_fp = os.path.join(
         dirs.tsv_data,
