@@ -80,7 +80,7 @@ Analysis
 ==============
 This script generates 2 tab delimited files that have the composite of secondary structure, missing regions, and missing regions assignment as outlined in the paper *Resolving the Ambiguity: Making Sense of Intrinsic Disorder when PDB structures disagree* (in review). The first file has PDB composite information, and it will be created in the folder *working/* with the filename pdb_seq.tsv. The second file has the UniProt composite information and it is stored in the *uni_data folder/* and it is called uni_composite.<date identifier>.json/yaml/tsv. In order to use these for analysis, these files can be loaded into Pandas dataframes, or another analysis tool. The yaml or json format preserves the data structures within.
 
-*driver_parse.py* is the analysis orchestrator and the entry point into the application. driver_parse does not currently accept any command-line arguments, therefore, to begin analysis run driver_parse as follows::
+*driver_parse.py* is the analysis orchestrator and the entry point into the application. These scripts will retrieve any current data files needed and create working data folders in the home directory. driver_parse does not currently accept any command-line arguments, therefore, to begin analysis run driver_parse as follows::
 
     python driver_parse.py
 
