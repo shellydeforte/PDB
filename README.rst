@@ -70,9 +70,9 @@ Update your system path variable with the location of the PDB and lib directorie
 
 - Non-persistent PATH update (disappears on reboot)::
 
-    export PATH=$PATH:/YourInstallationPath/PDB:/YourInstallationPath/PDB/pdb/lib'
+    export PATH=$PATH:/YourInstallationPath/PDB:/YourInstallationPath/PDB/pdb/lib
 
-- Persistent PATH update (Stackoverflow): Add the export PATH command to ~/.profile
+- Persistent PATH update: Add the export PATH command to ~/.profile
 
 
 
@@ -92,4 +92,4 @@ The following logs are written to the user home directory:
 
 The application will use existing data files when present. Therefore, on subsequent runs, remove any data files that you would like to have re-downloaded.
 
-Note that if errors are encountered, or processing is interrupted, *driver_parse.py* may be re-run and will resume at the furthest possible point. If errors are encountered during one of these follow-up runs, the applicaiton may be trying to use zero-byte data left over from the previous run. Therefore remmove that file before continuing. Once removed, the application will re-download the file and resume processing. This will be handled automatically in a future release.
+Note that if errors are encountered, or processing is interrupted, *driver_parse.py* may be re-run and will resume at the furthest possible point. If errors are encountered during one of these follow-up runs, the applicaiton may be trying to use zero-byte data left over from the previous run. Therefore remove that file before continuing. Once removed, the application will re-download the file and resume processing. This will be handled automatically in a future release.
